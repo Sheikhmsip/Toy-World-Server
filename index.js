@@ -39,7 +39,12 @@ app.get('/products', async(req, res) =>{
   res.send(result);
 })
 
-
+// Get toy
+app.get('/toys', async(req, res) =>{
+  const cursor = toyCollection.find();
+  const result = await cursor.toArray();
+  res.send(result);
+})
 
 
 
